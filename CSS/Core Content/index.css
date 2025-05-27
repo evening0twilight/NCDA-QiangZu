@@ -1,0 +1,174 @@
+@font-face {
+  font-family: Yuji Syuku Std;
+  src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  /* height: 100vh; */
+  background-color: #8F3D2C;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+}
+
+.top {
+  width: 100%;
+  height: 100px;
+  background-color: #D6A97F2B;
+  display: flex;
+  justify-content: center;
+}
+
+.top-Logo {
+  width: 90%;
+}
+
+.logo {
+  width: 83px;
+  height: 106px;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  /* height: 90%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.main {
+  width: 90%;
+  /* height: 90%; */
+  background-image: url(../../Images//核心文化//主页面/backgroundImg.jpg);
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 80px;
+  justify-content: space-around;
+}
+
+.title-box {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 384px;
+  height: 126px;
+  padding: 10px 208px 10px 208px;
+  background: #71492033;
+  font-family: Yuji Syuku Std;
+  font-size: 96px;
+  font-weight: 400;
+  color: #7C5849;
+}
+
+.picture-box {
+  width: 100%;
+  height: 1800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.picture-line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 25px;
+}
+
+.topLeft {
+  width: 421px;
+  height: 421px;
+}
+
+.topCenter {
+  width: 446px;
+  height: 670px;
+}
+
+.topRight {
+  width: 464px;
+  height: 306px;
+}
+
+.middleLeft {
+  width: 299px;
+  height: 448px;
+}
+
+.middleCenter {
+  width: 800px;
+  height: 434px;
+}
+
+.middleRight {
+  width: 450px;
+  height: 560px;
+}
+
+.bottomLeft {
+  width: 609px;
+  height: 343px;
+  margin-top: 80px;
+}
+
+.bottomRight {
+  width: 567px;
+  height: 378px;
+}
+
+.picture-line img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.more-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.one-box {
+  width: 300px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.one-box img {
+  width: 300px;
+  height: 450px;
+}
+
+.try-box {
+  width: 100%;
+  height: 800px;
+  background-color: black;
+}

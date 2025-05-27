@@ -1,0 +1,70 @@
+<!-- 羌寨建筑抗震模拟器 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>羌寨抗震结构模拟</title>
+    <style>
+        #building {
+            width: 300px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            background: linear-gradient(to bottom, #d1c7b7, #a89984);
+        }
+        .stone {
+            position: absolute;
+            background-color: #8a7f70;
+            border: 1px solid #5a4d3e;
+        }
+        #controls {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button onclick="buildWall()">建造羌碉</button>
+        <button onclick="simulateEarthquake(5)">模拟5级地震</button>
+        <button onclick="simulateEarthquake(7)">模拟7级地震</button>
+    </div>
+    <div id="building"></div>
+
+    <script>
+        function buildWall() {
+            const building = document.getElementById('building');
+            building.innerHTML = '';
+            
+            // 创建交错砌石结构
+            for (let i = 0; i < 10; i++) {
+                for (let j = 0; j < 3; j++) {
+                    const stone = document.createElement('div');
+                    stone.className = 'stone';
+                    stone.style.width = `${90 - j*10}px`;
+                    stone.style.height = '40px';
+                    stone.style.left = `${j % 2 === 0 ? 10 : 60}px`;
+                    stone.style.top = `${i * 40}px`;
+                    building.appendChild(stone);
+                }
+            }
+        }
+
+        function simulateEarthquake(magnitude) {
+            const stones = document.querySelectorAll('.stone');
+            stones.forEach((stone, index) => {
+                const delay = index * 50;
+                setTimeout(() => {
+                    stone.style.transform = `rotate(${Math.random() * magnitude}deg) 
+                                           translateX(${Math.random() * magnitude}px)`;
+                    if (magnitude >= 7 && Math.random() > 0.7) {
+                        stone.style.backgroundColor = '#ff0000';
+                    }
+                }, delay);
+            });
+        }
+
+        // 初始化
+        window.onload = buildWall;
+    </script>
+</body>
+</html>
