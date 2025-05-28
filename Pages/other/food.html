@@ -1,0 +1,82 @@
+<!-- 羌族饮食文化互动 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>羌族饮食地图</title>
+    <style>
+        #food-map {
+            width: 800px;
+            height: 500px;
+            margin: 20px auto;
+            background: url('images/qiang-map.jpg');
+            position: relative;
+        }
+        .food-marker {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url('images/marker.png') no-repeat;
+            cursor: pointer;
+        }
+        #food-info {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f4e8;
+            border: 1px solid #c83b3b;
+        }
+    </style>
+</head>
+<body>
+    <div id="food-map">
+        <!-- 标记点通过JS动态添加 -->
+    </div>
+    <div id="food-info">
+        <h2>点击地图上的标记了解羌族特色饮食</h2>
+    </div>
+
+    <script>
+        const foodData = [
+            {
+                name: "洋芋糍粑",
+                position: { x: 120, y: 80 },
+                description: "用高山土豆捶打制成的特色主食，配酸菜汤食用",
+                image: "food1.jpg"
+            },
+            {
+                name: "羌族老腊肉",
+                position: { x: 300, y: 200 },
+                description: "柏树枝熏制而成的腊肉，可存放三年不坏",
+                image: "food2.jpg"
+            },
+            {
+                name: "咂酒",
+                position: { x: 250, y: 350 },
+                description: "青稞、大麦发酵的酒，用竹管吸饮",
+                image: "food3.jpg"
+            }
+        ];
+
+        function showFoodInfo(food) {
+            const infoDiv = document.getElementById('food-info');
+            infoDiv.innerHTML = `
+                <h3>${food.name}</h3>
+                <img src="images/${food.image}" width="200" style="float:left; margin-right:15px;">
+                <p>${food.description}</p>
+                <div style="clear:both"></div>
+            `;
+        }
+
+        // 在地图上创建标记
+        foodData.forEach(food => {
+            const marker = document.createElement('div');
+            marker.className = 'food-marker';
+            marker.style.left = `${food.position.x}px`;
+            marker.style.top = `${food.position.y}px`;
+            marker.title = food.name;
+            marker.addEventListener('click', () => showFoodInfo(food));
+            document.getElementById('food-map').appendChild(marker);
+        });
+    </script>
+</body>
+</html>

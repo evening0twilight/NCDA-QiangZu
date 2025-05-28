@@ -1,0 +1,37 @@
+[
+  {
+      "date": "农历十月初一",
+      "name": "羌历年",
+      "description": "羌族新年，举行祭山会、跳莎朗等活动",
+      "image": "newyear.jpg",
+      "audio": "newyear.mp3"
+  },
+  {
+      "date": "农历三月十五",
+      "name": "瓦尔俄足节",
+      "description": "祭祀歌舞女神萨朗姐的节日",
+      "image": "walerzu.jpg",
+      "audio": "walerzu.mp3"
+  },
+  {
+      "date": "农历六月二十四",
+      "name": "转山会",
+      "description": "围绕神山祈福的宗教活动",
+      "image": "mountain.jpg",
+      "audio": "mountain.mp3"
+  },
+  {
+      "date": "农历二月初二",
+      "name": "牛王会",
+      "description": "感恩耕牛的祭祀仪式",
+      "image": "cow.jpg",
+      "audio": "cow.mp3"
+  },
+  {
+      "date": "农历五月初五",
+      "name": "端午节",
+      "description": "羌汉文化融合的节日，有独特的药膳习俗",
+      "image": "dragon.jpg",
+      "audio": "dragon.mp3"
+  }
+]
