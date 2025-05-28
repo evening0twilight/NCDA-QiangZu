@@ -1,0 +1,108 @@
+<!-- 羌族服饰试穿系统  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>羌族数字服饰试穿</title>
+    <style>
+        #dressing-room {
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            background: url('images/background.jpg') no-repeat;
+            background-size: cover;
+        }
+        #model {
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            left: 150px;
+            top: 100px;
+            z-index: 1;
+        }
+        .costume-piece {
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .costume-piece:hover {
+            transform: scale(1.05);
+        }
+        #controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dressing-room">
+        <img id="model" src="images/model-base.png" alt="人体模型">
+        <!-- 服饰部件将通过JS动态加载 -->
+    </div>
+    <div id="controls">
+        <button onclick="changeGender('female')">女性服饰</button>
+        <button onclick="changeGender('male')">男性服饰</button>
+        <button onclick="takePhoto()">保存搭配</button>
+    </div>
+
+    <script>
+        const costumes = {
+            female: [
+                { name: "头饰", img: "head-female.png", x: 150, y: 80 },
+                { name: "上衣", img: "top-female.png", x: 150, y: 150 },
+                { name: "百褶裙", img: "skirt.png", x: 150, y: 300 },
+                { name: "围腰", img: "apron.png", x: 150, y: 280 }
+            ],
+            male: [
+                { name: "包头巾", img: "head-male.png", x: 150, y: 80 },
+                { name: "对襟衣", img: "top-male.png", x: 150, y: 150 },
+                { name: "绑腿", img: "legwrap.png", x: 150, y: 400 },
+                { name: "皮靴", img: "boots.png", x: 150, y: 450 }
+            ]
+        };
+
+        function changeGender(gender) {
+            const room = document.getElementById('dressing-room');
+            // 清除现有服饰（保留基础模型）
+            document.querySelectorAll('.costume-piece').forEach(el => el.remove());
+            
+            // 添加新服饰
+            costumes[gender].forEach(item => {
+                const piece = document.createElement('img');
+                piece.className = 'costume-piece';
+                piece.src = `images/${item.img}`;
+                piece.style.left = `${item.x}px`;
+                piece.style.top = `${item.y}px`;
+                piece.draggable = true;
+                piece.addEventListener('dragstart', dragStart);
+                room.appendChild(piece);
+            });
+        }
+
+        function dragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.id);
+        }
+
+        function takePhoto() {
+            html2canvas(document.querySelector('#dressing-room')).then(canvas => {
+                const link = document.createElement('a');
+                link.download = '羌族服饰搭配.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+
+        // 初始化女性服饰
+        window.onload = () => {
+            changeGender('female');
+            // 动态加载html2canvas
+            const script = document.createElement('script');
+            script.src = 'https://html2canvas.hertzen.com/dist/html2canvas.min.js';
+            document.head.appendChild(script);
+        };
+    </script>
+</body>
+</html>
