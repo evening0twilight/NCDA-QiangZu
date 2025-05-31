@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Yuji Syuku Std;
+  src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
+}
+.container-reci {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 64px;
+}

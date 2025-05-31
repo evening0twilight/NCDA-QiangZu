@@ -42,12 +42,11 @@ body {
 .container {
   position: relative;
   top: 11%;
-  left: 18%;
-  width: calc(100vw - 36%); /* 根据边框宽度调整 */
-  height: calc(100vh - 22%); /* 根据边框高度调整 */
+  left: 17%;
+  width: calc(100vw - 34%);
+  height: calc(100vh - 22%);
   box-sizing: border-box;
   overflow: auto;
-  background-color: rgba(255,255,255,0.8); /* 半透明白色背景 */
 }
 
 /* 右上角按钮 */

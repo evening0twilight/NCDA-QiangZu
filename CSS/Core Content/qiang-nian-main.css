@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Yuji Syuku Std';
+  src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  width: 100%;
+  height: 200px;
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #7C5849;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 200px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.content img {
+  width: 230px;
+  height: 280px;
+}
