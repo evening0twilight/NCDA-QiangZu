@@ -3,8 +3,6 @@ function resizeBorder() {
   const leaf = document.getElementById('leaf-decoration');
   const imgRatio = 1920 / 1200; // 原图比例
   const windowRatio = window.innerWidth / window.innerHeight;
-
-  const scaleFactor = 1.2;
   
   if (windowRatio > imgRatio) {
     // 窗口更宽，高度优先
@@ -14,7 +12,7 @@ function resizeBorder() {
     img.style.top = '0';
     
     // 调整叶子位置
-    leaf.style.left = `${(window.innerWidth - img.clientWidth)/2 + img.clientWidth * 0.79}px`;
+    leaf.style.left = `${(window.innerWidth - img.clientWidth)/2 + img.clientWidth * 0.76}px`;
     leaf.style.bottom = `${window.innerHeight * 0.55}px`;
   } else {
     // 窗口更高，宽度优先
