@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #EAE4D173;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: Yuji Syuku Std;
+  src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
+}
+
+a {
+  text-decoration: none;
+}
