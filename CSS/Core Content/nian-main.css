@@ -76,3 +76,15 @@
   color: #7C5849;
   text-decoration:none
 }
+
+.back {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 90%;
+}
+
+.back img {
+  width: 84px;
+  height: 84px;
+}
