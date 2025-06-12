@@ -172,3 +172,8 @@ body {
   height: 800px;
   background-color: black;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
