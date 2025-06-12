@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(../../Images/核心文化/主页面/backgroundImg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #EAE4D173;
+}
+
+@font-face {
+  font-family: Moon Stars Kai;
+  src: url(../../font/MoonStarsKai-Bold.ttf);
+}

@@ -2,6 +2,7 @@
   font-family: Yuji Syuku Std;
   src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
 }
+
 .container-reci {
   display: flex;
   flex-direction: column;
