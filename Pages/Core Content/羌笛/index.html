@@ -47,14 +47,20 @@
     </div>
     <!-- 播放器 -->
     <div class="audio-player">
-      <audio id="flute-audio">
+      <!-- <audio id="flute-audio">
         <source src="../../../Audio/羌笛.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
       <div id="play-button" class="play-btn">
         <img src="../../../Images/核心文化/羌笛/start.png" alt="点击播放羌笛音乐">
         <span>点击播放羌笛音乐</span>
-      </div>
+      </div> -->
+      <button data-play-pause="toggle" class="play-pause-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 24 25" fill="none" class="play-pause-icon">
+          <path d="M3.5 5L3.50049 3.9468C3.50049 3.177 4.33382 2.69588 5.00049 3.08078L20.0005 11.741C20.6672 12.1259 20.6672 13.0882 20.0005 13.4731L17.2388 15.1412L17.0055 15.2759M3.50049 8L3.50049 21.2673C3.50049 22.0371 4.33382 22.5182 5.00049 22.1333L14.1192 16.9423L14.4074 16.7759" stroke="currentColor" stroke-width="2" stroke-miterlimit="16" data-play-pause="path" stroke-linecap="round"></path>
+        </svg>
+        <span class="svgContext">点击播放羌笛音乐</span>
+      </button>
     </div>
 
     <!-- 返回图标 -->
@@ -62,5 +68,9 @@
       <img src="../../../Images/核心文化/子页面模板/back.png" alt="">
     </a>
   </div>
+  <script src="../../../JS/gsap.min.js"></script>
+  <script src="../../../JS/MorphSVGPlugin3.min.js"></script>
+  <script src="../../../JS/Physics2DPlugin.min.js"></script>
+  <script src="../../../JS/Core content/bofang.js"></script>
 </body>
 </html>
