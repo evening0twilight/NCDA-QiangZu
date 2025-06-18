@@ -119,10 +119,9 @@
 }
 
 .audio-player {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 50px;
+  position: absolute;
+  top: 15%;
+  left: 15%;
 }
 
 #play-button {
@@ -241,4 +240,11 @@ button {
 .svgContext {
   width: 200px;
   height: auto;
+}
+
+.svgContext {
+  font-family: Moon Stars Kai HW;
+  font-weight: 400;
+  font-size: 20px;
+  color: #666666;
 }

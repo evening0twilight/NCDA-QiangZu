@@ -108,10 +108,10 @@ function initMorphingPlayPauseToggle() {
     // 控制音频播放
     if (isPlaying) {
       audioElement.pause();
-      buttonText.textContent = '点击播放羌笛音乐';
+      buttonText.textContent = '播放音乐';
     } else {
       audioElement.play();
-      buttonText.textContent = '点击暂停羌笛音乐';
+      buttonText.textContent = '暂停音乐';
     }
     
     isPlaying = !isPlaying;
@@ -129,6 +129,6 @@ function initMorphingPlayPauseToggle() {
       },
       ease: "power4.inOut"
     });
-    buttonText.textContent = '点击播放羌笛音乐';
+    buttonText.textContent = '播放音乐';
   });
 }

@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
       audio.play();
       playButton.classList.add('playing');
       playImage.src = '../../Images/核心文化/羌笛/暂停.png'; // 如果有暂停图标
-      playText.textContent = '点击暂停羌笛音乐';
+      playText.textContent = '暂停音乐';
     } else {
       // 暂停音频
       audio.pause();
       playButton.classList.remove('playing');
       playImage.src = '../../Images/核心文化/羌笛/start.png';
-      playText.textContent = '点击播放羌笛音乐';
+      playText.textContent = '播放音乐';
       }
   });
     
@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
   audio.addEventListener('ended', function() {
     playButton.classList.remove('playing');
     playImage.src = '../../Images/核心文化/羌笛/start.png';
-    playText.textContent = '点击播放羌笛音乐';
+    playText.textContent = '播放音乐';
   });
 });
