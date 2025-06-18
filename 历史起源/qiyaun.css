@@ -355,5 +355,12 @@ body {
   color: bisque;
   transition: all 0.8s ease;
 }
-
+.logo
+{
+    position: absolute;
+  
+    width: 50px;
+    z-index: 1;
+  
+}
 

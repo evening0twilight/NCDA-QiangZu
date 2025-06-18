@@ -162,3 +162,9 @@
 .s3 { animation-delay: 1s; }
 .s4 { animation-delay: 1.5s; }
 .s5 { animation-delay: 2s; }
+.logo
+{
+    position: absolute;
+   margin-left: 50px;
+    width: 90px;
+}
