@@ -22,17 +22,38 @@ body {
   height: 100px;
   background-color: #D6A97F2B;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .top-Logo {
-  width: 90%;
+  width: 5%;
 }
 
 .logo {
   width: 83px;
   height: 106px;
   object-fit: cover;
+}
+
+.top-text {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 16px;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
 
 .container {
