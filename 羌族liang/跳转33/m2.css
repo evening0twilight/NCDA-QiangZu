@@ -1,0 +1,60 @@
+/* 初始化页面样式，清除默认边距等 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 设置背景图，可替换成你实际的背景图片路径，这里用了类似质感的背景图示例（若没有合适图，也可用颜色渐变模拟） */
+  background: url('../旅游上页.png') no-repeat center center/cover; 
+  font-family: "微软雅黑", sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  /* 让子元素在水平方向有间隔时用 space-between，这里演示左右布局，可根据需求调整 */
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 50px;
+  /* 让内容区域有最小高度，适配不同屏幕，可按需调整 */
+  min-height: 100vh; 
+}
+
+.text-box {
+  width: 30%;
+  /* 文字与容器边缘的内间距 */
+  padding: 20px; 
+  background-color: rgba(0, 0, 0, 0.3);
+  /* 让文字区域背景有半透明效果，可调整 rgba 第四个参数改变透明度 */
+  border-radius: 8px; 
+  margin-left: 100px;
+}
+
+.text-box p {
+  line-height: 1.8;
+  font-size: 30px;
+  font-family: '楷书';
+}
+
+.card {
+  width: 250px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* 右侧透明卡片的透明度等样式，可按需调整 */
+  border-radius: 8px; 
+  margin-left: 50px;
+}
+
+/* 响应式适配，屏幕较小时调整布局 */
+@media (max-width: 768px) {
+ .container {
+    flex-direction: column;
+  }
+ .text-box,
+ .card {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}

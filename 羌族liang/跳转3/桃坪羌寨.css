@@ -49,9 +49,9 @@
 }
 
 .l3 {
-  font-size: clamp(1rem, 2vw, 2rem);
-  margin-left: clamp(10rem, 15vw, 18rem);
-  margin-top: clamp(25rem, 40vh, 30rem);
+  font-size: 3rem;      
+  margin-left: 12rem;     
+  margin-top: 32rem;    
   animation: fadeInUp 1s ease-out 0.9s forwards;
 }
 
@@ -66,16 +66,17 @@
 }
 
 .k1 {
-  width: clamp(15rem, 25vw, 22rem);
-  margin-top: clamp(12rem, 20vh, 15rem);
-  margin-left: clamp(30rem, 50vw, 50rem);
+  width: 25rem;          
+  margin-top: 25rem;     
+  margin-left: 45rem;   
   animation: fadeInRight 1s ease-out 1.2s forwards, float 6s ease-in-out infinite 1.2s;
 }
 
 .k2 {
-  width: clamp(18rem, 30vw, 25rem);
-  margin-top: clamp(22rem, 35vh, 28rem);
-  margin-left: clamp(40rem, 65vw, 65rem);
+  width: 20rem;
+  height: 27rem;        
+  margin-top: 17rem;     
+  margin-left: 65rem;  
   animation: fadeInRight 1s ease-out 1.5s forwards, float 6s ease-in-out infinite 1.5s;
 }
 
