@@ -1,19 +1,18 @@
-/* 全局变量 */
+
 :root {
-  --primary-color: #8B4513;    /* 羌族特色棕色 */
-  --accent-color: #CD5C5C;     /* 羌族特色红色 */
-  --text-color: #FFFFFF;       /* 文本颜色 */
-  --shadow-color: rgba(0, 0, 0, 0.3); /* 阴影颜色 */
+  --primary-color: #8B4513;    
+  --accent-color: #CD5C5C;    
+  --text-color: #FFFFFF;       
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
-/* 基础样式重置 */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 页面主体 */
 .yemian {
   background-image: url(../旅游上页.png);
   background-size: cover;
@@ -24,7 +23,6 @@
   overflow: hidden;
 }
 
-/* 文字元素 */
 .l1, .l2, .l3 {
   position: absolute;
   color: var(--text-color);
@@ -44,7 +42,7 @@
 .l2 {
   font-size: clamp(1.5rem, 4vw, 3rem);
   margin-left: clamp(7rem, 12vw, 13rem);
-  margin-top: clamp(17rem, 28vh, 22rem); /* 向下移动了约2rem/3vh */
+  margin-top: clamp(17rem, 28vh, 22rem); 
   animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
@@ -55,7 +53,6 @@
   animation: fadeInUp 1s ease-out 0.9s forwards;
 }
 
-/* 图片元素 */
 .k1, .k2 {
   position: absolute;
   border-radius: 8px;
@@ -80,14 +77,14 @@
   animation: fadeInRight 1s ease-out 1.5s forwards, float 6s ease-in-out infinite 1.5s;
 }
 
-/* 图片悬停效果 */
+
 .k1:hover, .k2:hover {
   transform: translateY(-15px) scale(1.05);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
   filter: brightness(1.1);
 }
 
-/* 装饰元素 */
+
 .decoration {
   position: absolute;
   background-color: var(--accent-color);
@@ -120,7 +117,6 @@
   animation: pulse 4.5s ease-in-out infinite 2s;
 }
 
-/* 花瓣飘落效果 */
 .petal {
   position: absolute;
   width: 10px;
@@ -131,7 +127,7 @@
   animation: fall linear infinite;
 }
 
-/* 动画关键帧 */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -191,7 +187,6 @@
   }
 }
 
-/* 响应式设计 */
 @media (max-width: 1200px) {
   .k1 {
     margin-left: clamp(20rem, 40vw, 40rem);
@@ -226,13 +221,13 @@
   }
   .l2 {
     font-size: clamp(1rem, 3vw, 2rem);
-    margin-top: clamp(14rem, 23vh, 18rem); /* 响应式调整下移位置 */
+    margin-top: clamp(14rem, 23vh, 18rem); 
   }
   .l3 {
     font-size: clamp(0.8rem, 2vw, 1.5rem);
     margin-top: clamp(18rem, 30vh, 22rem);
   }
   .k1, .k2 {
-    display: none; /* 在小屏幕上隐藏图片 */
+    display: none; 
   }
 }
