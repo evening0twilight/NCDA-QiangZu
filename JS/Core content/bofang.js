@@ -117,7 +117,7 @@ function initMorphingPlayPauseToggle() {
     isPlaying = !isPlaying;
   });
   
-  // 当音频播放结束时重置状态
+  // 音频播放结束时重置状态
   audioElement.addEventListener('ended', function() {
     isPlaying = false;
     gsap.to(iconPath, {
