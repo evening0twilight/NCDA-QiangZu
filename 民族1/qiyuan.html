@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head> 
-    <link rel="stylesheet" href="./qiyaun.css" />
-    <script src="./qiyuan.js"></script>
+    <link rel="stylesheet" href="qiyaun.css" />
+    <script src="qiyuan.js"></script>
   </head>
   <body>
     <div class="big">
@@ -21,25 +21,28 @@
 “西南夷”中的羌人：汉代在西南设“汶山郡”（今四川茂县、汶川等地），管理羌人聚居区，
 部分羌人融入当地氐、彝等民族。</div>
           <div class="tu1">
-            <img src="./ma.png" alt="tu1" class="yangtou">
-
+            <img src="ma.png" alt="tu1" class="yangtou">
           </div>
-          <div class="kuang1"><img src="./框.png" alt="" class="kuang11" width="300px"></div>
-          <div class="kuang2"><img src="./覆盖.png" alt="" class="kuang22" width="300px"></div>
-          <div class="kuang3"><img src="./框.png" alt="" class="kuang33" width="300px"></div>
+          <div class="kuang1"><img src="框.png" alt="" class="kuang11" width="300px"></div>
+          <div class="kuang2"><img src="覆盖.png" alt="" class="kuang22" width="300px"></div>
+          <div class="kuang3"><img src="框.png" alt="" class="kuang33" width="300px"></div>
           <div class="z1">上古传说</div>
           <div class="z11">与文献记载</div>
           <div class="z2">民族渊源</div>
           <div class="z22">与迁徙</div>
           <div class="z3">现代羌族</div>
           <div class="z33">的形成</div>
-          <div class="jian"><img src="./箭头.png" alt="" class="jiantou"></div>
+          <div class="jian"><img src="箭头.png" alt="" class="jiantou"></div>
       </div>
     </div>
-      <script>
-      const jiantou =document.querySelector('.jiantou')
-      jiantou.addEventListener('click',function(){
-        window.location.href='/NCDA-QiangZu/现代/qiyuan.html'
-      })
+    <script>
+      const jiantou = document.querySelector('.jiantou');
+      jiantou.addEventListener('click', function() {
+        // 假设当前文件与qiyuan.html在同一目录下的"现代"文件夹中
+        window.location.href = "../现代/qiyuan.html";
+        // 若实际路径不同，可调整为：
+        // window.location.href = "../民族1/qiyuan.html"; （示例：向上一级目录）
+      });
     </script>
   </body>
+</html>
