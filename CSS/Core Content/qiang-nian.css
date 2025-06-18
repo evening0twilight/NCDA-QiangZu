@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Yuji Syuku Std;
+  src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -76,4 +81,10 @@ body {
     right: 10px;
     top: 10px;
   }
+}
+
+.content-text {
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 40px;
 }

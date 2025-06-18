@@ -1,0 +1,90 @@
+.container {
+  width: 90%;
+  height: 100%;
+  /* padding: 20px 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.title {
+  margin-top: 50px;
+  width: 100%;
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  justify-content: center;
+  color: #7C5849;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+@media (min-width: 1921px) {
+  .titlePicture {
+  width: 1100px;
+  height: 1100px;
+}
+  
+}
+
+.titlePicture {
+  width: 800px;
+  height: 800px;
+}
+
+.titlePicture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  margin-top: 200px;
+  width: auto;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.one {
+  width: 700px;
+  height: 90px;
+  background-color: #9A7D4D1A;
+  border-radius: 10px;
+  font-family: Moon Stars Kai;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+  color: #7C5849;
+  text-decoration:none
+}
+
+.back {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 90%;
+}
+
+.back img {
+  width: 84px;
+  height: 84px;
+}

@@ -1,14 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .tupianqiehuan{
     background-image: url(./旅游上页.png);
     background-size: cover;
-    width: 1700px;
+    width: 1710px;
     height: 800px;
     
 }
 .food{
     background-image: url(./旅游主页面.png);
     background-size: cover;
-    width: 1700px;
+    width: 1710px;
     height: 2500px;
 }
 .biaoti{
