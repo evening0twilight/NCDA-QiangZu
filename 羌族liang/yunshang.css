@@ -1,0 +1,164 @@
+.tupianqiehuan{
+    background-image: url(./旅游上页.png);
+    background-size: cover;
+    width: 1700px;
+    height: 800px;
+    
+}
+.food{
+    background-image: url(./旅游主页面.png);
+    background-size: cover;
+    width: 1700px;
+    height: 2500px;
+}
+.biaoti{
+    color: white;
+    font-size: 80px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 180px;
+    text-shadow: 10px 10px 0.8px #000000;
+    font-family: '楷体';
+}
+.m1,.m2,.m3,.m4,.m5,.m6{
+    width: 300px;
+    position: absolute;
+
+}
+.l1,.l2,.l3,.l4,.l5{
+    position: absolute;
+}
+.s1,.s2,.s3,.s4,.s5{
+    position: absolute;
+    width: 300px;
+
+}
+.s1,.s2,.s3,.s4,.s5{
+    border-radius: 12px;
+}
+.s4
+{
+   margin-left: 680px;
+   width: 330px;
+   height: 450px;
+   margin-top: 100px;
+
+}
+.s1{
+    margin-left: 400px;
+    margin-top: 150px;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    transform: rotate(-4deg);
+
+}
+.s5{
+    width: 350px;
+    margin-left: 100px;
+    margin-top: 330px;
+    transform: rotate(-3deg);
+}
+.s2{
+    margin-left: 1000px;
+    margin-top: 150px;
+    width: 300px; 
+    transform: rotate(3deg);
+}
+.s3{
+    margin-left: 1250px;
+    margin-top: 330px;
+    width: 349px; 
+    transform: rotate(4deg);
+}
+.bichang{
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    margin-left: 670px;
+    margin-top: 150px;
+    font-family: '楷体';
+}
+.m1{
+    margin-left: 300px;
+    margin-top: 300px;
+    width: 300px;
+}
+.m2{
+    margin-left: 800px;
+    margin-top: 650px;
+    width: 300px;
+}
+.m3{
+    margin-left: 300px;
+    margin-top: 1000px;
+    width: 300px;
+}
+.m4{
+    margin-left: 900px;
+    margin-top: 1350px;
+    width: 300px;
+}
+.m5{
+    margin-left: 300px;
+    margin-top: 1700px;
+    width: 300px;
+}
+.m6{
+   margin-left: 650px;
+    margin-top: 800px;
+    width: 300px;
+}
+.p1,.p2,.p3,.p4,.p5,.p6{
+    font-size: 30px;
+    color: white;
+    margin-left: 300px;
+    position: absolute;
+}
+.p2
+{
+    width: 600px;
+    margin-top: 360px;
+    margin-left: 650px;
+
+}
+.p1{
+    margin-top: 750px;
+    width: 600px;
+    margin-left: 1110px;
+}
+.p4{
+    margin-top: 1100px;
+    width: 600px;
+    margin-left: 650px;
+}
+.p3{
+    margin-top: 1400px;
+    width: 450px;
+    margin-left: 1210px; 
+}
+.p5{
+    margin-top: 1800px;
+    width: 600px;
+    margin-left: 650px;
+}
+/* 定义上下浮动动画 */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 为图片添加浮动动画效果 */
+.s1, .s2, .s3, .s4, .s5 {
+    /* 保留原有样式... */
+    animation: float 3s ease-in-out infinite; /* 启动动画 */
+    transition: transform 0.5s ease; /* 平滑过渡 */
+}
+
+/* 错开动画时间，使效果更自然 */
+.s1 { animation-delay: 0s; }
+.s2 { animation-delay: 0.5s; }
+.s3 { animation-delay: 1s; }
+.s4 { animation-delay: 1.5s; }
+.s5 { animation-delay: 2s; }

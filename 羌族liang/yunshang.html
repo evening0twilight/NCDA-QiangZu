@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>云上尔玛之旅</title>
+        <meta name="description" content="体验羌族文化与美食之旅">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./yunshang.css">
+        <style>
+            .tupianqiehuan1 img {
+                transition: transform 0.3s ease;
+                cursor: pointer;
+            }
+            .tupianqiehuan1 img:hover {
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tupianqiehuan">
+            <div class="tupianqiehuan1">
+                <div class="biaoti">体验"云上尔玛"之旅</div>
+                <!-- left->right -->
+                <img src="./r1.png" alt="羌族文化展示" class="s1">
+                <img src="./r2.png" alt="羌族传统建筑" class="s2">
+                <img src="./r3.jpg" alt="羌族节日庆典" class="s3">
+                <img src="./r4.jpg" alt="羌族手工艺品" class="s4">
+                <img src="./r5.jpg" alt="羌族自然风光" class="s5">
+            </div>
+        </div>
+        <div class="food">
+            <div class="bichang">必尝传统美食</div>
+            <img src="./6.jpg "alt="羌族老腊肉" class="m1">
+            <img src="./1.jpg" alt="洋芋糍粑" class="m2">
+            <img src="./2.jpg" alt="酸菜面块" class="m3">
+            <img src="./3.jpg" alt="青稞咂酒" class="m4">
+            <img src="./4.jpg" alt="荞面馍馍" class="m5">
+            <img src="./5.jpg" alt="其他美食" class="m6">
+
+            <div class="p1">羌族老請肉
+柏树枝熏制365天以上,品莹透亮 年猪
+祭祀的延续 理县桃坪养要农家</div>
+            <div class="p2">洋芋糕柜
+木格捶打2小时,蘸蜂蜜或辣椒面 婚宴必
+备”打磁把“仪式 度县中国古花裝小吃街</div>
+            <div class="p3">酸菜面块
+老坛酸菜+手祉面片,解酒神器 尊自
+茶马古道驮队饮食 放用绵處古琪</div>
+            <div class="p4">青碟旺酒
+竹管吸饮,发酵3月有余,酒精度5°
+集体分享象征团结 并年庆典现场</div>
+            <div class="p5">养面馍馍
+码楼石磨现率,包野生菌饰祭祀时
+用作“面塑邪灵”原材料 北川先族民
+俗村</div>
+        </div>
+        <!-- <script src="./yunshang.js" async defer></script> -->
+        <script>
+   document.addEventListener('DOMContentLoaded', function () {
+  // 定义跳转路径（使用 VS Code 复制的相对路径）
+  const imageLinks = {
+    s1: '/NCDA-QiangZu/羌族liang/跳转3/桃坪羌寨.html', // 替换为你复制的路径
+    s2: '/NCDA-QiangZu/羌族liang/跳转2/桃坪羌寨.html',     // 示例路径，按需修改
+    s3: 'NCDA-QiangZu/羌族liang/跳转3/节日.html',     // 示例路径，按需修改
+    s4: '/NCDA-QiangZu/羌族liang/跳转1/桃坪羌寨.html',   // 示例路径，按需修改
+    s5: 'NCDA-QiangZu/羌族liang/跳转5/自然.html',     // 示例路径，按需修改
+  };
+
+  // 遍历图片并绑定点击事件
+  Object.keys(imageLinks).forEach((imgClass) => {
+    const img = document.querySelector('.' + imgClass);
+    if (img) {
+      img.addEventListener('click', function () {
+        const targetUrl = imageLinks[imgClass];
+        
+        // 验证路径是否存在（仅在控制台输出，方便调试）
+        console.log(`尝试跳转至: ${targetUrl}`);
+        
+        // 打开链接
+        window.open(targetUrl, '_blank');
+      });
+    }
+  });
+
+  // 添加测试按钮（可选）：点击后在控制台输出当前页面的完整路径
+  const testBtn = document.createElement('button');
+  testBtn.textContent = '测试路径';
+  testBtn.style.position = 'fixed';
+  testBtn.style.bottom = '20px';
+  testBtn.style.right = '20px';
+  testBtn.onclick = () => {
+    console.log('当前页面完整路径:', window.location.href);
+  };
+  document.body.appendChild(testBtn);
+});
+        </script>
+    </body>
+</html>

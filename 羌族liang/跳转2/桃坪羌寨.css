@@ -1,0 +1,224 @@
+/* 全局变量 */
+:root {
+  --primary-color: #8B4513;    /* 羌族特色棕色 */
+  --accent-color: #CD5C5C;     /* 羌族特色红色 */
+  --text-color: #FFFFFF;       /* 文本颜色 */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* 阴影颜色 */
+}
+
+/* 基础样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面主体 */
+.yemian {
+  background-image: url(../旅游上页.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 文字元素 */
+.l1, .l2, .l3 {
+  position: absolute;
+  color: var(--text-color);
+  font-family: 'Ma Shan Zheng', '楷书', serif;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+  z-index: 10;
+  opacity: 0;
+}
+
+.l1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-left: clamp(5rem, 10vw, 10rem);
+  margin-top: clamp(10rem, 20vh, 15rem);
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.l2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-left: clamp(7rem, 12vw, 13rem);
+  margin-top: clamp(20%, 25vh, 20rem); 
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.l3 {
+  font-size: 2rem;  
+  margin-left: 15rem; 
+  margin-top: 30rem;  
+  animation: fadeInUp 1s ease-out 0.9s forwards;
+}
+
+/* 图片元素 */
+.k1, .k2 {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.k1 {
+  width: clamp(15rem, 25vw, 22rem);
+  margin-top: 28rem;      /* 调整顶部间距 */
+  margin-left: 45rem;     /* 调整左侧间距 */
+  animation: fadeInRight 1s ease-out 1.2s forwards, float 6s ease-in-out infinite 1.2s;
+}
+
+.k2 {
+  width: 22rem;          /* 固定宽度，取原范围中间值 */
+  margin-top: 15rem;     /* 固定顶部边距 */
+  margin-left: 65rem;    /* 固定左侧边距 */
+  animation: fadeInRight 1s ease-out 1.5s forwards, float 6s ease-in-out infinite 1.5s;
+}
+.k1:hover, .k2:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+.decoration {
+  position: absolute;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.decoration-1 {
+  width: 150px;
+  height: 150px;
+  top: 15%;
+  left: 10%;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.decoration-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: 15%;
+  animation: pulse 5s ease-in-out infinite 1s;
+}
+
+.decoration-3 {
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  right: 25%;
+  animation: pulse 4.5s ease-in-out infinite 2s;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .k1 {
+    margin-left: clamp(20rem, 40vw, 40rem);
+  }
+  .k2 {
+    margin-left: clamp(30rem, 55vw, 55rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .l1 {
+    margin-left: clamp(3rem, 8vw, 8rem);
+  }
+  .l2 {
+    margin-left: clamp(5rem, 10vw, 10rem);
+  }
+  .l3 {
+    margin-left: clamp(7rem, 12vw, 12rem);
+  }
+  .k1 {
+    margin-left: clamp(15rem, 35vw, 35rem);
+  }
+  .k2 {
+    margin-left: clamp(20rem, 45vw, 45rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .l1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-top: clamp(8rem, 15vh, 12rem);
+  }
+  .l2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-top: clamp(14rem, 23vh, 18rem); 
+  }
+  .l3 {
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    margin-top: clamp(18rem, 30vh, 22rem);
+  }
+  .k1, .k2 {
+    display: none; 
+  }
+}
