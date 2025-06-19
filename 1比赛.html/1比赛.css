@@ -10,19 +10,21 @@ body {
   overflow-x: hidden;
 }
 
-/* 导航栏 - 保留原有风格但优化布局 */
+/* 导航栏 - 优化宽度和布局 */
 .daohang {
   height: 90px;
   width: 100%;
   background-color: rgb(15, 15, 15);
   opacity: 0.8;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  right: 0; /* 添加 right: 0 确保完全填充视口宽度 */
   z-index: 999;
   display: flex;
   align-items: center;
   transition: all 0.3s;
+  
 }
 
 .daohang:hover {
@@ -41,19 +43,33 @@ body {
   transform: scale(1.05);
 }
 
-/* 导航链接 - 放在右上角并添加间距 */
-.links-container {
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 60px; /* 链接之间的间距 */
-}
+/* 导航链接 - 优化布局 */
+/* .links-container { */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* right: 50px; 恢复原始的 right 值，保持合理的右间距 */
+  /* transform: translateY(-50%); */
+  /* display: flex; */
+  /* align-items: center; */
+  /* gap: 60px; 链接之间的间距 */
+  
+/* } */
 
 .l1, .l2, .l3 {
   list-style: none;
-  margin-left: 150px;
+  /* 移除 margin-left: 150px，避免与 flex gap 冲突 */
+}
+.l1{
+  position: absolute;
+  right: 28%;
+}
+.l2{
+  position: absolute;
+  right: 18%;
+}
+.l3{
+  position:absolute;
+  right: 8%;
 }
 
 a {
