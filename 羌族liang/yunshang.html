@@ -7,10 +7,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>云上尔玛之旅</title>
+        <title>体验之旅</title>
         <meta name="description" content="体验羌族文化与美食之旅">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./yunshang.css">
+        <link rel="stylesheet" href="yunshang.css">
         <style>
             .tupianqiehuan1 img {
                 transition: transform 0.3s ease;
@@ -22,25 +22,26 @@
         </style>
     </head>
     <body>
+        <img src="./" alt="" class="logo">
         <div class="tupianqiehuan">
             <div class="tupianqiehuan1">
                 <div class="biaoti">体验"云上尔玛"之旅</div>
                 <!-- left->right -->
-                <img src="./r1.png" alt="羌族文化展示" class="s1">
-                <img src="./r2.png" alt="羌族传统建筑" class="s2">
-                <img src="./r3.jpg" alt="羌族节日庆典" class="s3">
-                <img src="./r4.jpg" alt="羌族手工艺品" class="s4">
-                <img src="./r5.jpg" alt="羌族自然风光" class="s5">
+                <img src="r1.png" alt="羌族文化展示" class="s1">
+                <img src="r2.png" alt="羌族传统建筑" class="s2">
+                <img src="r3.jpg" alt="羌族节日庆典" class="s3">
+                <img src="r4.jpg" alt="羌族手工艺品" class="s4">
+                <img src="r5.jpg" alt="羌族自然风光" class="s5">
             </div>
         </div>
         <div class="food">
             <div class="bichang">必尝传统美食</div>
-            <img src="./6.jpg "alt="羌族老腊肉" class="m1">
-            <img src="./1.jpg" alt="洋芋糍粑" class="m2">
-            <img src="./2.jpg" alt="酸菜面块" class="m3">
-            <img src="./3.jpg" alt="青稞咂酒" class="m4">
-            <img src="./4.jpg" alt="荞面馍馍" class="m5">
-            <img src="./5.jpg" alt="其他美食" class="m6">
+            <img src="6.jpg" alt="羌族老腊肉" class="m1">
+            <img src="1.jpg" alt="洋芋糍粑" class="m2">
+            <img src="2.jpg" alt="酸菜面块" class="m3">
+            <img src="3.jpg" alt="青稞咂酒" class="m4">
+            <img src="4.jpg" alt="荞面馍馍" class="m5">
+            <img src="5.jpg" alt="其他美食" class="m6">
 
             <div class="p1">羌族老請肉
 柏树枝熏制365天以上,品莹透亮 年猪
@@ -59,16 +60,15 @@
 用作“面塑邪灵”原材料 北川先族民
 俗村</div>
         </div>
-        <!-- <script src="./yunshang.js" async defer></script> -->
         <script>
    document.addEventListener('DOMContentLoaded', function () {
-  // 定义跳转路径（使用 VS Code 复制的相对路径）
+  // 定义跳转路径（改为相对路径，假设当前文件在 NCDA-QiangZu/羌族liang/ 目录下）
   const imageLinks = {
-    s1: '/NCDA-QiangZu/羌族liang/跳转3/桃坪羌寨.html', // 替换为你复制的路径
-    s2: '/NCDA-QiangZu/羌族liang/跳转2/桃坪羌寨.html',     // 示例路径，按需修改
-    s3: 'NCDA-QiangZu/羌族liang/跳转3/节日.html',     // 示例路径，按需修改
-    s4: '/NCDA-QiangZu/羌族liang/跳转1/桃坪羌寨.html',   // 示例路径，按需修改
-    s5: 'NCDA-QiangZu/羌族liang/跳转5/自然.html',     // 示例路径，按需修改
+    s1: './跳转3/桃坪羌寨.html', // 同目录下的子目录
+    s2: './跳转2/桃坪羌寨.html',
+    s3: './跳转3/节日.html',
+    s4: './跳转1/桃坪羌寨.html',
+    s5: './跳转5/自然.html',
   };
 
   // 遍历图片并绑定点击事件
@@ -77,24 +77,19 @@
     if (img) {
       img.addEventListener('click', function () {
         const targetUrl = imageLinks[imgClass];
-        
-        // 验证路径是否存在（仅在控制台输出，方便调试）
-        console.log(`尝试跳转至: ${targetUrl}`);
-        
-        // 打开链接
         window.open(targetUrl, '_blank');
       });
     }
   });
 
-  // 添加测试按钮（可选）：点击后在控制台输出当前页面的完整路径
+  // 测试按钮（可选）
   const testBtn = document.createElement('button');
   testBtn.textContent = '测试路径';
   testBtn.style.position = 'fixed';
   testBtn.style.bottom = '20px';
   testBtn.style.right = '20px';
   testBtn.onclick = () => {
-    console.log('当前页面完整路径:', window.location.href);
+    console.log('当前页面相对路径:', document.baseURI);
   };
   document.body.appendChild(testBtn);
 });

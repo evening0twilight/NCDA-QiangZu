@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head> 
-    <link rel="stylesheet" href="./qiyaun.css" />
-    <script src="./qiyuan.js"></script>
+    <title>历史起源</title>
+    <link rel="stylesheet" href="qiyaun.css" />
+    <script src="qiyuan.js"></script>
   </head>
   <body>
+    <img src="../羌族liang/logo.png" alt="" class="logo">
     <div class="big">
       <div class="middle">
         <div class="qiangzulisi">羌族历史</div>
@@ -19,8 +21,7 @@
           《诗经·商颂》提到“自彼氐羌，莫敢不来享”，反映羌人与中原的互动。《史记·西南夷列传》
           中“羌”与“氐”并称，指代西部游牧部落。</div>
           <div class="tu1">
-            <img src="./羊头.jpg" alt="tu1" class="yangtou">
-
+            <img src="羊头.jpg" alt="tu1" class="yangtou">
           </div>
           <div class="kuang1"><img src="./框.png" alt="" class="kuang11" width="300px"></div>
           <div class="kuang2"><img src="./框.png" alt="" class="kuang22" width="300px"></div>
@@ -31,13 +32,15 @@
           <div class="z22">与迁徙</div>
           <div class="z3">现代羌族</div>
           <div class="z33">的形成</div>
-          <div class="jian"><img src="./箭头.png" alt="" class="jiantou"></div>
+          <div class="jian"><img src="箭头.png" alt="" class="jiantou"></div>
       </div>
     </div>
     <script>
-      const jiantou =document.querySelector('.jiantou')
-      jiantou.addEventListener('click',function(){
-        window.location.href='/NCDA-QiangZu/民族1/qiyuan.html'
-      })
+      const jiantou = document.querySelector('.jiantou');
+      jiantou.addEventListener('click', function() {
+        // 假设qiyuan.html与当前文件在同一目录
+        window.location.href = '../民族1/qiyuan.html';
+      });
     </script>
   </body>
+</html>

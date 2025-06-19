@@ -7,7 +7,14 @@
   --gold-color: #D4AF37;
   --animation-speed: 0.8s;
 }
-
+.logo
+{
+    position: absolute;
+  
+    width: 50px;
+    z-index: 1;
+  
+}
 /* 基础样式 */
 body {
   background-color: var(--bg-color);
