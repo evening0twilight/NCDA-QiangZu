@@ -64,6 +64,13 @@
   cursor: pointer;
   opacity: 0;
 }
+.fanhui{
+    position: absolute;
+    width: 100px;
+    right: 10%;
+    top: 65%;
+    z-index: 999;
+}
 
 .k1 {
   width: clamp(15rem, 25vw, 22rem);

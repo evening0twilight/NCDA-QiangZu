@@ -5,7 +5,13 @@
   --text-color: #FFFFFF;       /* 文本颜色 */
   --shadow-color: rgba(0, 0, 0, 0.3); /* 阴影颜色 */
 }
-
+.fanhui{
+    position: absolute;
+    width: 100px;
+    right: 20%;
+    top: 68%;
+    z-index: 999;
+}
 /* 基础样式重置 */
 * {
   margin: 0;
