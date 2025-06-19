@@ -10,6 +10,13 @@ body {
   font-family: "微软雅黑", sans-serif;
   color: #fff;
 }
+.fanhui{
+    position: absolute;
+    width: 100px;
+    right: 10%;
+    top: 65%;
+    z-index: 999;
+}
 
 .container {
   display: flex;

@@ -9,3 +9,7 @@ window.onload = function() {
         });
     }
 };
+  const jiantou = document.querySelector('.fanhui');
+      jiantou.addEventListener('click', function() {
+        window.location.href = "../../index.html";
+      });

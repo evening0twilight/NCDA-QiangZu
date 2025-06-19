@@ -231,3 +231,10 @@
     display: none; 
   }
 }
+.fanhui{
+    position: absolute;
+    width: 100px;
+    right: 10%;
+    top: 65%;
+    z-index: 999;
+}
