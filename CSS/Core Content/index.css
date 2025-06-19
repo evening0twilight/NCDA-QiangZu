@@ -22,17 +22,38 @@ body {
   height: 100px;
   background-color: #D6A97F2B;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .top-Logo {
-  width: 90%;
+  width: 5%;
 }
 
 .logo {
   width: 83px;
   height: 106px;
   object-fit: cover;
+}
+
+.top-text {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Yuji Syuku Std;
+  font-weight: 400;
+  font-size: 16px;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
 
 .container {
@@ -152,7 +173,7 @@ body {
 
 .one-box {
   width: 300px;
-  height: 700px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,8 +188,202 @@ body {
   height: 450px;
 }
 
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.picture-line > div:hover img {
+  transform: scale(1.5);
+}
+
+
+.hidden-element {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.show-element {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.picture-line > div {
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.picture-line > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.picture-line > div:hover img {
+  transform: scale(1.5);
+}
+
+
+.img-container {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  overflow: visible;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* 图片缩放效果 */
+.img-container:hover img {
+  transform: scale(1.05);
+} 
+
+.img-qiangnian:hover {
+  box-shadow: 
+    0 0 10px #DD8E67,
+    0 0 20px #DD8E67,
+    0 0 30px #DD8E67;
+  animation: glowing-qiangnian 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing-qiangnian {
+  0% {
+    box-shadow: 0 0 10px #DD8E67, 0 0 20px #DD8E67;
+  }
+  100% {
+    box-shadow: 0 0 20px #DD8E67, 0 0 30px #DD8E67, 0 0 40px #DD8E67;
+  }
+}
+
+.img-qiangxiu:hover {
+  box-shadow: 
+    0 0 10px #3B4676,
+    0 0 20px #3B4676,
+    0 0 30px #3B4676;
+  animation: glowing-qiangxiu 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing-qiangxiu {
+  0% {
+    box-shadow: 0 0 10px #3B4676, 0 0 20px #3B4676;
+  }
+  100% {
+    box-shadow: 0 0 20px #3B4676, 0 0 30px #3B4676, 0 0 40px #3B4676;
+  }
+}
+
+.img-qiangdi:hover {
+  box-shadow: 
+    0 0 10px #172D66,
+    0 0 20px #172D66,
+    0 0 30px #172D66;
+  animation: glowing-qiangdi 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing-qiangdi {
+  0% {
+    box-shadow: 0 0 10px #172D66, 0 0 20px #172D66;
+  }
+  100% {
+    box-shadow: 0 0 20px #172D66, 0 0 30px #172D66, 0 0 40px #172D66;
+  }
+}
+
+.img-diaolou:hover {
+  box-shadow: 
+    0 0 10px #3C3821,
+    0 0 20px #3C3821,
+    0 0 30px #3C3821;
+  animation: glowing-diaolou 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing-diaolou {
+  0% {
+    box-shadow: 0 0 10px #3C3821, 0 0 20px #3C3821;
+  }
+  100% {
+    box-shadow: 0 0 20px #3C3821, 0 0 30px #3C3821, 0 0 40px #3C3821;
+  }
+}
+
 .try-box {
   width: 100%;
   height: 800px;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
 }
+
+/* 视频容器样式优化 */
+.video-container {
+  width: 70%;
+  height: 650px;
+  position: relative;
+  z-index: 2;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* 视频本身的样式 */
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* 背景容器样式 */
+.background-container {
+  position: absolute;
+  width: 70%;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.background-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+
+video::-webkit-media-controls-panel {
+  background-image: linear-gradient(rgba(123, 88, 73, 0.5), rgba(123, 88, 73, 0.7));
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .video-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 90%;
+    height: 500px;
+  }
+} 

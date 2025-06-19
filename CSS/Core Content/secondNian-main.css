@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #EAE4D173; /* 移除透明度，使其成为主要颜色 */
+  background-image: url('../../Images/核心文化/子页面模板/addbgi1.jpg');
+  background-blend-mode: multiply; /* 使图片中的白色部分变透明 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: Yuji Syuku Std;
+  src: url(../../font/Yuji_Syuku/YujiSyuku-Regular.ttf);
+}
+
+a {
+  text-decoration: none;
+}
