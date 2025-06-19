@@ -3,11 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-.fanhui{
+.fanhui {
     position: absolute;
-    width: 100px;
+    width: 120px; /* 比原来大20px，更醒目 */
+    height: auto; /* 保持宽高比 */
     right: 5%;
     top: 5%;
+    /* 加个浅色背景，让图片和页面区分开 */
+    background: rgba(255,255,255,0.8); 
+    padding: 10px;
+    border-radius: 8px; 
+    /* 加阴影增强层次感 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    /* 让动画更丝滑 */
+    transition: all 0.3s ease; 
+}
+
+/* 鼠标悬浮时再放大，强化交互反馈 */
+.fanhui:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 body{
     width: 100vw;
@@ -56,13 +71,13 @@ body{
    left: 40%;
    width: 330px;
    height: 450px;
-   margin-top: 100px;
+  top: 55%;
    z-index: 9999;
 
 }
 .s1{
     left: 23.5%;
-    margin-top: 150px;
+   top: 60%;
     height: 400px;
     width: 300px;
     border-radius: 20px;
@@ -73,19 +88,19 @@ body{
 .s5{
     width: 350px;
     left: 8%;
-    margin-top: 330px;
+    top: 80%;
     transform: rotate(-3deg);
 }
 .s2{
     left: 58%;
-    margin-top: 150px;
+    top: 60%;
     width: 300px; 
     transform: rotate(3deg);
     z-index: 999;
 }
 .s3{
     left: 71%;
-    margin-top: 330px;
+    top: 80%;
     width: 349px; 
     transform: rotate(4deg);
 }

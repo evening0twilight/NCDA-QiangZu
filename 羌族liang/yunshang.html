@@ -83,17 +83,6 @@
       });
     }
   });
-
-  // 测试按钮（可选）
-  const testBtn = document.createElement('button');
-  testBtn.textContent = '测试路径';
-  testBtn.style.position = 'fixed';
-  testBtn.style.bottom = '20px';
-  testBtn.style.right = '20px';
-  testBtn.onclick = () => {
-    console.log('当前页面相对路径:', document.baseURI);
-  };
-  document.body.appendChild(testBtn);
 });
   const jiantou = document.querySelector('.fanhui');
       jiantou.addEventListener('click', function() {
